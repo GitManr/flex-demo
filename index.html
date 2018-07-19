@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>flex属性Demo</h1>
+    <div  >
+        <div class="left">
+            <h3>容器属性：flex-direction、flex-wrap、flex-flow、justify-content、align-items、align-content</h3>
+            <h4>flex-direction:</h4><span>决定主轴的方向</span>
+            <div class="directionRadio radioList" >
+                <input type="radio" name="direction" value="row" checked>row
+                <input type="radio" name="direction" value="row-reverse">row-reverse
+                <input type="radio" name="direction" value="column">column
+                <input type="radio" name="direction" value="column-reverse">column-reverse
+            </div>
+            <div class="container directionContainer">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+            </div>
+
+            <h4>flex-wrap:</h4><span>布局是否换行</span>
+            <div class="wrapRadio radioList" >
+                <input type="radio" name="wrap" value="wrap" checked>wrap
+                <input type="radio" name="wrap" value="nowrap">nowrap
+                <input type="radio" name="wrap" value="wrap-reverse">wrap-reverse
+            </div>
+            <div class="container wrapContainer">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+            </div>
+
+
+            <h4>flex-flow : 文档流，是是 flex-direction 和 flex-wrap 属性的复合属性</h4>
+            <div>flex-flow:row-reverse wrap;</div>
+
+            <h4>justify-content:</h4><span>定义子项在主轴上的对齐方式</span>
+            <div class="justifyRadio radioList" >
+                <input type="radio" name="justify" value="flex-start" checked>flex-start
+                <input type="radio" name="justify" value="flex-end">flex-end
+                <input type="radio" name="justify" value="center">center
+                <input type="radio" name="justify" value="space-around">space-around
+                <input type="radio" name="justify" value="space-between">space-between
+            </div>
+            <div class="container justifyContainer">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+            </div>
+
+            <h4>align-items:</h4><span>定义子项在侧轴上的对齐方式</span>
+            <div class="alignRadio radioList" >
+                <input type="radio" name="align" value="flex-start" >flex-start
+                <input type="radio" name="align" value="flex-end">flex-end
+                <input type="radio" name="align" value="center">center
+                <input type="radio" name="align" value="baseline">baseline(基线对齐，根据文本对齐)
+                <input type="radio" name="align" value="stretch" checked>stretch
+            </div>
+            <div class=" container alignContainer">
+                <div class="item1">111111111111111</div>
+                <div class="item1">211111111111111</div>
+                <div class="item1">31111111111</div>
+                <div class="item1">411111111</div>
+                <div class="item1">511111</div>
+            </div>
+
+            <h4>align-content:</h4><span>容器在多行排列下，子项在侧轴上的对齐方式</span>
+            <div class="alignContentRadio radioList" >
+                <input type="radio" name="alignContent" value="flex-start" >flex-start
+                <input type="radio" name="alignContent" value="flex-end">flex-end
+                <input type="radio" name="alignContent" value="center">center
+                <input type="radio" name="alignContent" value="space-around">space-around
+                <input type="radio" name="alignContent" value="space-between">space-between
+                <input type="radio" name="alignContent" value="stretch" checked>stretch
+            </div>
+            <div class="container alignContentContainer">
+                <div class="item1">1111111</div>
+                <div class="item1">2222222</div>
+                <div class="item1">3333333</div>
+                <div class="item1">4444444</div>
+                <div class="item1">5555555</div>
+                <div class="item1">11111</div>
+                <div class="item1">22222</div>
+                <div class="item1">33333</div>
+                <div class="item1">44444</div>
+                <div class="item1">55555</div>
+                <div class="item1">1</div>
+                <div class="item1">2</div>
+                <div class="item1">3</div>
+                <div class="item1">4</div>
+                <div class="item1">5</div> 
+            </div>
+
+
+            
+
+        </div> 
+        <div class="right">
+            <h3>子项属性：flex-grow、flex-shrink、flex-basis、flex、align-self、order</h3>
+
+            <h4>flex-grow:</h4><span>用来按比列分配剩余空间(扩展)，默认值=0</span>
+
+            <div class="growInput input">
+                <span>第一个</span><input type="text" att="1" >
+                <span>第二个</span><input type="text" att="2" >
+                <span>第三个</span><input type="text" att="3" >
+                <span>第四个</span><input type="text" att="4" >
+                <span>第五个</span><input type="text" att="5" >
+            </div>
+            <div class="containerS grow">
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                
+            </div>
+
+            <h4>flex-shrink:</h4><span>当空间不足时，按比例收缩，默认值=1</span>
+
+            <div class="shrinkInput input">
+                <span>第一个</span><input type="text" att="1" >
+                <span>第二个</span><input type="text" att="2" >
+                <span>第三个</span><input type="text" att="3" >
+                <span>第四个</span><input type="text" att="4" >
+                <span>第五个</span><input type="text" att="5" >
+            </div>
+            <div class="containerS shrink">
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+                <span>1</span>
+                
+            </div>
+            <h4>align-self:</h4><span>决定子项自身的侧轴对齐方式</span>
+            <div class="selfRadio radioList" >
+                <input type="radio" name="self" value="flex-start" checked>flex-start
+                <input type="radio" name="self" value="flex-end">flex-end
+                <input type="radio" name="self" value="center">center
+                <input type="radio" name="self" value="baseline">baseline
+                <input type="radio" name="self" value="stretch">stretch
+            </div>
+            <div class="container selfContainer">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item item3">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+            </div>
+
+            <h4>order:</h4><span>定义项目的排列顺序，值越小越靠前，默认值为0</span>
+
+            <div class="orderInput input">
+                <span>第一个</span><input type="text" att="1" >
+                <span>第二个</span><input type="text" att="2" >
+                <span>第三个</span><input type="text" att="3" >
+                <span>第四个</span><input type="text" att="4" >
+                <span>第五个</span><input type="text" att="5" >
+            </div>
+            <div class="containerS order">
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                <span>0</span>
+                
+            </div>
+
+            <h4>flex-basis:</h4><span>子项在主轴上的基准尺寸，值为百分比或像素值，默认值=auto</span>
+            <p> 注意：配合flex-grow和flex-shrink使用才能发挥效果</p>
+            <p> flex-basis:100px; 可以</p>
+            
+
+            <h4>flex:</h4><span>复合属性：flex-grow、flex-shrink、flex-basis的简写</span>
+            <p>多个值以空格隔开，按既定的顺序(grow、shrink、basis)，可省略</p>
+            <p>值得写法有多种形式</p>
+
+            <p>flex:none; 不扩展、不收缩的需求。 等同于：flex: 0 0 auto;</p>
+            <p>flex:auto; 可扩展、可收缩的需求。 等同于：flex: 1 1 auto;</p>
+            <p>flex:1 0; 只设置的前两个值，basis的值为0%;</p>
+
+
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+</body>
+</html>
